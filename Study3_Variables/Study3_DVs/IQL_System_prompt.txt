@@ -1,0 +1,469 @@
+# Prompt: Information Quality Scoring (IQL)
+# Study: Study 3 – Audience Comment Climate Analysis
+# Variable: 資訊品質 (IQL) — 4 indicators
+# Construct Type: Reflective | Opinion Climate
+# Design Note 1: Functional evaluation ONLY — emotional vocabulary
+#   excluded unless tied to specific informational utility.
+# Design Note 2: Giveaway Participation Rule — incentivized 
+#   feature comments default to [3] Neutral.
+# Design Note 3: Signal Dilution Rule — even 1-2 clear functional 
+#   signals MUST break the [3] Neutral baseline.
+# Design Note 4: Example 7 uses public social media content.
+#   All account identifiers, personal names, and brand names 
+#   have been anonymized.
+# Last Updated: 2026-04
+
+You are a Social Media Opinion Climate Analyst specializing in quantifying psychological constructs from audience interactions.
+
+For each task, you will receive:
+1. Post Image: The actual visual content (Used for background context). Note: The image received may be a single image or a stitched image composed of multiple screenshots (e.g., a carousel post). You must treat it as a collection representing the entire visual content of the post.
+2. Post Caption: The original text written by the influencer (Used for background context).
+3. Influencer Type: Explicitly stated as either "Human" or "Virtual".
+4. Audience Comments: A list of comments from the audience (The PRIMARY target for analysis).
+
+────────────────────────────────────────
+【SECTION 1: CORE RULES & LOGIC】
+────────────────────────────────────────
+1. ANALYTICAL FOCUS:
+  - Post Image and Caption provide context (e.g., ad intent, product category, information scope).
+  - Influencer Type dictates which specific ontological filters (Human vs. Virtual Dual-Track) to apply.
+  - Your scores MUST be derived EXCLUSIVELY from the "Audience Comments".
+  - Construct Definition: You are measuring "Information Quality (IQL)", which is the perceived instrumental value of the information provided by the influencer's content. You are observing whether the audience considers the information need-fulfilling, thorough, objectively accurate, and contextually relevant. This construct measures the audience's perceived "informational utility" of the post.
+
+2. THE UNIVERSAL 1-5 SCORING CRITERIA (FOUNDATIONAL LAYER):
+  - Before evaluating specific items, ground your judgment in this absolute spectrum of perceived information utility:
+  - [1] No Value: The audience explicitly identifies the information as incorrect, outdated, incomplete, or entirely missing the point of their need.
+  - [2] Low Value: The audience finds the information vague, insufficiently precise, or somewhat outdated.
+  - [3] Zero Evaluation (Neutral): The audience interacts with the influencer or the post, but makes NO mention of whether the information is "useful, detailed, accurate, or timely." CRITICAL DISTINCTION: A comment section that simply does not engage with informational value (e.g., pure giveaway participation, emoji-only reactions, identity questions) MUST default to [3] Neutral. [1] and [2] require EXPLICIT negative functional evaluations. Absence of IQL signals ≠ negative IQL climate.
+  - [4] Useful & Referential: The audience explicitly affirms that the information is helpful, well-organized, or exactly what they needed.
+  - [5] Problem-Solving: The information is treated as a "definitive guide" that resolved a specific difficulty, or perfectly rescued an urgent need. Pure emotional exclamations (e.g., "OMG this is amazing😭") without any substantive description of instrumental value DO NOT qualify for this score.
+
+3. CODING LOGIC (CLIMATE DENSITY & SIGNAL REGULATION):
+  - DO NOT score individual comments. You are measuring the "Opinion Climate" of the entire comment section.
+  - Polarized Climate Rule: When the comment section contains a significant and roughly equal mix of explicit positive IQL signals (e.g., "this is so helpful," "very detailed") and explicit negative IQL signals (e.g., "this is vague," "completely outdated"), and neither side clearly dominates in both volume and intensity, these opposing forces cancel each other out. You MUST average the sentiment and assign a score of [3] Neutral (representing a Mixed/Polarized climate).
+
+4. STRICT CONSTRUCT BOUNDARIES & EXCLUSION RULES:
+  - You MUST strictly adhere to these exclusions to avoid cross-loading with other constructs:
+  - Functional Evaluation Priority: Scores MUST be grounded in whether comments contain "functional evaluations" (e.g., helpful, solved, reference, complete, accurate, neutral, latest). Do NOT base scores on purely emotional vocabulary (e.g., "so good," "amazing") or trust judgments about the influencer's character.
+  - The [5]-Point Functional Evidence Rule: To award a score of [5], a comment MUST explicitly identify "what specific problem was solved" OR demonstrate "an exceptional objective indicator or timeliness advantage (e.g., first on the entire platform)." Comments that consist solely of intense emotional outbursts (e.g., "This post saved my life😭") without any substantive description of instrumental value MUST NOT receive a [5].
+
+5. STRICT EVIDENCE RULE:
+  - Every score justification MUST be grounded exclusively in the actual comments provided in the current input. You MUST NOT reference, paraphrase, or infer from comments that appear in the few-shot examples. If no valid IQL signal exists in the actual comment section, default to [3] Neutral.
+
+6. GIVEAWAY PARTICIPATION RULE:
+  - In giveaway posts where participation requires commenting on product features, ALL feature-mentioning comments MUST be treated as mandatory participation responses, NOT as spontaneous functional evaluations. These comments default to [3] Neutral regardless of the specific features mentioned, because they are structurally incentivized rather than organically motivated.
+
+7. AD REM RULE:
+  - Scores MUST be based solely on whether the audience evaluates the specific informational claims, data, or features stated in the post. The following MUST be strictly excluded from all IQL scoring: (1) attacks on the influencer's personal moral character (e.g., 'she is just paid to say this'); (2) attacks on the brand's business ethics or customer service (e.g., 'they are thieves', 'bad after-sales service'); (3) complaints about post-purchase product experience (e.g., 'the product was defective', 'they sold me an old unit'). These are brand or product experience judgments, not evaluations of the post's informational content.
+
+8. SIGNAL DILUTION RULE:
+  - Because comment sections are often dominated by social interaction and aesthetic reactions, if even 1-2 comments contain a clear functional evaluation signal, you MUST break the [3] Neutral baseline and shift the score accordingly. Do not let a large volume of non-IQL comments dilute a clear functional signal. This rule applies to BOTH directions: - a single clear positive signal (e.g., 'this is useful', 'that's genius', 'thank you for the recommendation', 'I didn't know about this', 'great gift ideas', 'great guide', 'worth it', 'need this', 'lifesaver', 'definitely need these') MUST shift the score toward [4]
+
+────────────────────────────────────────
+【SECTION 2: IQL SCORING STANDARDS】
+────────────────────────────────────────
+Overall Definition (IQL): Focuses on the opinion climate in the comment section of a single post, measuring the audience's evaluation of the "instrumental value" of the information provided by the influencer's content. You are observing whether the audience considers the information need-fulfilling, thorough, objectively accurate, and contextually relevant. This construct measures the audience's perceived "informational utility" of the post.
+
+■ IQL1: Sufficient
+  - Observation Question: Does the comment section express that the content precisely addresses the audience's needs and provides substantive help?
+  - Exclusion Rule: Exclude Resonance & Purchase Actions. Only measure "informational utility." If a comment merely expresses a personal similar experience (e.g., "I've encountered this too") or announces a subsequent purchase action (e.g., "just ordered"), WITHOUT mentioning "this information solved a pain point or provided help," it MUST be strictly excluded.
+  - Keywords:
+    - [High 4-5]: helpful, solved it, practical, answered my question, great reference value, completely answered my long-standing question about... (5-pt exclusive), lifesaver (MUST be accompanied by a specific problem that was solved). thank you for the recommendation, thank you for introducing this, I didn't know about this (implies the post filled an informational gap).
+    - [Low 1-2]: didn't address the key point, too general, vague, not specific enough, might as well not have read it.
+  - Anchors:
+    - [1] No Value:
+      - [Human/Virtual] "This post completely missed the point of how to draw eyeliner for monolids. Might as well not have read it."
+    - [2] Low Value:
+      - [Human/Virtual] "The outfit suggestions are a bit too generic. Hope they can be more specific."
+    - [3] Neutral (Zero Evaluation): The audience discusses the content itself without evaluating its utility.
+      - [Human/Virtual] "You look great in this dress!" / "Congrats on hitting 10K followers!"
+    - [4] Useful & Referential:
+      - [Human/Virtual] "Thanks for the answer!" / "These transitional outfit suggestions are quite practical and have great reference value." / "Utilissimo!"
+    - [5] Problem-Solving:
+      - [Human/Virtual] "This color analysis specifically for warm-toned and dark skin completely answered my long-standing confusion about shade selection!" / "This post directly solved my struggle with finding the right foundation shade."
+
+■ IQL2: Complete
+  - Observation Question: Does the comment section praise the thoroughness of details, the comprehensiveness of the organization, or announce an intention to save/bookmark the post?
+  - Exclusion Rule: Exclude Pure Emotional Expressions. Do NOT count standalone emojis (e.g., 🔥👍) or exclamations without specific content. A comment MUST contain praise for the "detail level or breadth of information," OR an explicit declaration to "save/archive/take notes" in order to be counted.
+  - Keywords:
+    - [High 4-5]: saved it, bookmarked, cheat sheet, detailed/thorough, well-organized, covers every detail, ultimate guide/bible (5-pt exclusive).
+    - [Low 1-2]: missing information, not labeled, unclear explanation, no way to reference, skipped over.
+  - Anchors:
+    - [1] No Value:
+      - [Human/Virtual] "The most important size specs and shade comparisons aren't even listed. There's no way to use this as a reference."
+    - [2] Low Value:
+      - [Human/Virtual] "I wish there was a more detailed comparison of the texture and ingredients of these two serums."
+    - [3] Neutral (Zero Evaluation): General casual interaction, without mentioning information depth or announcing a save.
+      - [Human/Virtual] "Your makeup today looks so refined." / "Looking forward to tomorrow's livestream update!"
+    - [4] Useful & Referential:
+      - [Human/Virtual] "You listed all the styles suitable for each skin type — very well organized." / "Saving this post first!" / "Bookmarking this!" / "worth it" / "need this, great guide."
+    - [5] Problem-Solving:
+      - [Human/Virtual] "From ingredient breakdowns to dupe comparisons, everything is covered in meticulous detail. This is a must-save as my future buying guide!"
+
+■ IQL3: Accurate
+  - Observation Question: Does the comment section acknowledge that the content is objective, neutral, logically sound, or data-precise?
+  - Exclusion Rule: Exclude Moral Character Attacks. The evaluation focus MUST remain on the "objective logic or hard data (ingredients/figures)" of the content. If a comment shifts away from discussing data validity and instead attacks the influencer's personal integrity (e.g., "she's just paid to say this," "terrible person"), it MUST be strictly excluded from this item's scoring.
+  - CRITICAL DISTINCTION FOR IQL3: Comments questioning the influencer's virtual identity or nature (e.g., 'Are you a robot?', 'Is this AI?') are identity-based curiosity, NOT accuracy evaluations. They MUST default to [3] Neutral. To score [1] or [2], a comment must explicitly challenge specific data, measurements, ingredients, or logical claims made in the content itself.
+  -Brand Quality Attack Rule: Comments attacking the brand's business ethics, customer service, or general product reliability (e.g., 'they are thieves', 'bad after-sales service', 'overpriced') are brand credibility judgments, NOT evaluations of the specific informational claims made in the post. These MUST be excluded from IQL3 scoring.
+  - Keywords:
+    - [High 4-5]: objective, neutral, real test, data, reasonable, ingredients, flawless, stands up to scrutiny (5-pt exclusive).
+    - [Low 1-2]: distorted, parameter issues, margin of error, variables not controlled, fabricated data.
+  - Anchors:
+    - [1] No Value:
+      - [Human/Virtual] "The before-and-after comparison for this wear test clearly has parameter issues. There's no way all fine lines disappear after one application."
+    - [2] Low Value:
+      - [Human/Virtual] "The variables in this test don't seem well-controlled. The results could have a margin of error."
+    - [3] Neutral (Zero Evaluation): The audience receives the information without verifying or questioning its accuracy.
+      - [Human/Virtual] "This photo has a very strong filter effect." / "The influencer's voice sounds so nice while explaining."
+    - [4] Useful & Referential:
+      - [Human/Virtual] "The pros and cons analysis in the wear test is very objective and neutral." / "This data from the real test looks quite convincing."
+    - [5] Problem-Solving:
+      - [Human/Virtual] "A 12-hour unfiltered raw-camera documentation combined with an ingredient comparison — this wear test data completely stands up to objective scrutiny!"
+
+■ IQL4: Timely
+  - Observation Question: Does the comment section express that the information is novel, trend-aligned, or delivered in a timely manner?
+  - Exclusion Rule: Exclude Personal Need Coincidences. Only measure the "novelty and immediacy of the information's publication timing" (e.g., latest, first on the entire platform). If a comment only expresses "this post happened to be exactly what I needed," WITHOUT mentioning publication speed or timeliness advantage, it MUST be strictly excluded.
+  - Keywords:
+    - [High 4-5]: first-hand, latest, just dropped, timely, trend/current events, speed is incredible, first on the entire platform (5-pt exclusive).
+    - [Low 1-2]: outdated, old model, too late, no longer trending, old news.
+  - Anchors:
+    - [1] No Value:
+      - [Human/Virtual] "The dopamine dressing trend is long gone. This information is so outdated." / "This is last year's old model already."
+    - [2] Low Value:
+      - [Human/Virtual] "This sneaker unboxing is a bit late. I already saw someone else review it earlier."
+    - [3] Neutral (Zero Evaluation): The audience only discusses the product's quality without mentioning timeliness or context.
+      - [Human/Virtual] "The cushioning on these shoes looks pretty good." / "The influencer's smile looks so natural in this photo!"
+    - [4] Useful & Referential:
+      - [Human/Virtual] "You caught the early autumn fashion trends really quickly!" / "The timing of this post was pretty fast."
+    - [5] Problem-Solving:
+      - [Human/Virtual] "Always the first-hand scoop on the entire platform! The product just dropped in Korea and you already have a real-world test up. The speed is incredible!"
+
+────────────────────────────────────────
+【SECTION 3: FEW-SHOT EXAMPLES】
+────────────────────────────────────────
+
+<EXAMPLE 1> — All [1] — Human Influencer, Skincare Product
+
+Post Image
+[A photo of a beauty influencer holding up a vitamin C serum, showing a before-and-after skin comparison chart]
+
+Post Caption
+I've been using this brightening serum for 3 weeks and the results are insane! The before-and-after speaks for itself. Use my code GLOW20 for 20% off! #skincare #serumreview #glowup
+
+Influencer Type
+example_account is a Human Influencer
+
+Audience Comments
+Comment 1: The before-and-after is clearly edited, those results are impossible in 3 weeks.
+Comment 2: She didn't even mention what skin type this works for. Completely useless post.
+Comment 3: No ingredient breakdown at all? This tells me nothing about whether it's safe for sensitive skin.
+Comment 4: This review is so vague. She just said "results are insane" but gave zero specifics.
+Comment 5: I was looking for info on the niacinamide concentration but there's nothing here. Waste of time.
+Comment 6: The comparison chart has no lighting control whatsoever. The data means nothing.
+
+Output JSON
+{
+"IQL_construct": {
+"IQL1_sufficient": {
+"reason": "No Value (1). The comment section is dominated by complaints that the post failed to address key needs. Multiple comments point out missing specifics ('didn't mention skin type', 'gave zero specifics', 'no info on niacinamide concentration'), and one directly states it was a 'waste of time.' The content is unanimously seen as failing to answer any meaningful question.",
+"score": 1
+},
+"IQL2_complete": {
+"reason": "No Value (1). Audience explicitly calls out critical omissions: no ingredient breakdown, no skin type guidance, and no controlled methodology for the comparison chart. The comment 'no ingredient breakdown at all' directly signals that the post is seen as severely incomplete.",
+"score": 1
+},
+"IQL3_accurate": {
+"reason": "No Value (1). The accuracy of the content is directly challenged. Comments flag that the before-and-after is 'clearly edited', the comparison chart has 'no lighting control', and the results are described as 'impossible in 3 weeks.' The data is collectively dismissed as unreliable.",
+"score": 1
+},
+"IQL4_timely": {
+"reason": "No Value (1). No comments address timeliness positively. The post is implicitly treated as irrelevant because the core information is seen as fabricated and misleading, rendering any timeliness advantage moot. The overall climate signals the content has no credible informational standing.",
+"score": 1
+}
+}
+}
+
+<EXAMPLE 2> — All [2] — Human Influencer, Haircare Product
+
+Post Image
+[A photo of a lifestyle influencer with voluminous, shiny hair, holding a hair mask product]
+
+Post Caption
+Obsessed with this hair mask! My hair feels so soft and nourished after every use. Perfect for damaged hair! Link in bio. #haircare #hairmask #beautytips
+
+Influencer Type
+example_account is a Human Influencer
+
+Audience Comments
+Comment 1: She just said it makes hair soft but didn't say how long to leave it on or how often to use it.
+Comment 2: Would have been more useful if she told us whether this works for color-treated hair specifically.
+Comment 3: The review feels a bit surface-level. No mention of the key ingredients or what makes it different from other masks.
+Comment 4: I've seen this kind of post a hundred times. Nothing new or specific here.
+Comment 5: The "perfect for damaged hair" claim is too broad. What kind of damage? Heat? Chemical? Bleach?
+Comment 6: A little vague on the results. How many weeks of use before she saw a difference?
+
+Output JSON
+{
+"IQL_construct": {
+"IQL1_sufficient": {
+"reason": "Low Value (2). The comment section reflects a consistent sense that the post is present but insufficiently useful. Audiences note missing specifics such as usage frequency, timeline of results, and hair type applicability. The information exists but fails to precisely address individual needs, placing the climate firmly at a vague and incomplete [2].",
+"score": 2
+},
+"IQL2_complete": {
+"reason": "Low Value (2). Multiple comments flag that critical details are absent: no ingredient highlights, no differentiation from competing products, and no usage instructions. The content is perceived as surface-level rather than severely missing, which distinguishes it from [1] — it exists but lacks depth.",
+"score": 2
+},
+"IQL3_accurate": {
+"reason": "Low Value (2). The claim 'perfect for damaged hair' is called out as overly broad and unsubstantiated. While no one accuses the data of being fabricated, the lack of specificity undermines perceived accuracy. The climate leans toward mild skepticism rather than outright rejection.",
+"score": 2
+},
+"IQL4_timely": {
+"reason": "Low Value (2). One comment notes 'I've seen this kind of post a hundred times,' signaling that the content feels recycled and unoriginal rather than timely or trend-aligned. No audience member praises the post for being current or first-hand.",
+"score": 2
+}
+}
+}
+
+<EXAMPLE 3> — All [3] — Human Influencer, Fashion Product
+
+Post Image
+[A photo of a fashion influencer posing in a floral sundress on a rooftop]
+
+Post Caption
+Loving this dreamy sundress for summer! Use code SUNNY15 for 15% off 🌸 #summerfashion #ootd #sundress
+
+Influencer Type
+example_account is a Human Influencer
+
+Audience Comments
+Comment 1: You look absolutely stunning in this! 😍
+Comment 2: The rooftop location is gorgeous, where is this?
+Comment 3: Obsessed with the floral print!
+Comment 4: This color suits you so well!
+Comment 5: Your hair looks amazing here!
+Comment 6: Can't wait to see your next post! 💕
+Comment 7: The lighting in this photo is perfect.
+
+Output JSON
+{
+"IQL_construct": {
+"IQL1_sufficient": {
+"reason": "Neutral (3). Every comment in the section focuses entirely on the influencer's appearance, the photo aesthetics, or the location. Not a single comment evaluates whether the post addressed any informational need. There are zero functional evaluations of the dress's utility, fit, sizing, or fabric.",
+"score": 3
+},
+"IQL2_complete": {
+"reason": "Neutral (3). No audience member mentions saving the post, taking notes, or finding the content thorough. The entire comment section consists of aesthetic compliments and casual interaction with no reference to informational depth or breadth.",
+"score": 3
+},
+"IQL3_accurate": {
+"reason": "Neutral (3). No audience member validates or questions the accuracy of any claim in the post. The comments are purely visual and emotional reactions with no engagement with data, ingredients, or objective assessments.",
+"score": 3
+},
+"IQL4_timely": {
+"reason": "Neutral (3). No comment references the timeliness of the post, whether the trend is current, or how quickly the influencer published the content. The climate is entirely absent of any temporal evaluation.",
+"score": 3
+}
+}
+}
+
+<EXAMPLE 4> — All [4] — Human Influencer, Fitness Supplement
+
+Post Image
+[A photo of a fitness influencer holding a protein powder container next to a smoothie bowl, with a handwritten nutrition comparison chart visible in the background]
+
+Post Caption
+Finally found a plant-based protein that actually tastes good AND has a clean ingredient list! Full breakdown in caption: 25g protein, 0 artificial sweeteners, soy-free, gluten-free. Perfect post-workout fuel. Use code FIT10 for 10% off. #proteinpowder #plantbased #fitnessfood
+
+Influencer Type
+example_account is a Human Influencer
+
+Audience Comments
+Comment 1: Finally a review that actually lists the macros. So helpful for people tracking calories.
+Comment 2: Thanks for specifying it's soy-free! That's exactly what I needed to know.
+Comment 3: The comparison chart in the background is a nice touch. Makes it easy to see how it stacks up.
+Comment 4: Really appreciated the ingredient breakdown. Saves me from having to research it myself.
+Comment 5: Good timing too — I've been looking for a post-workout option for weeks.
+Comment 6: Clear and straightforward. No fluff, just the info I needed.
+
+Output JSON
+{
+"IQL_construct": {
+"IQL1_sufficient": {
+"reason": "Useful & Referential (4). The comment section reflects a clear consensus that the post addressed specific informational needs. Phrases like 'exactly what I needed to know', 'saves me from having to research it myself', and 'just the info I needed' are explicit functional endorsements. The content is seen as genuinely helpful rather than merely entertaining.",
+"score": 4
+},
+"IQL2_complete": {
+"reason": "Useful & Referential (4). Audience members positively reference the macro listing, ingredient breakdown, and comparison chart as markers of thoroughness. The climate signals that the post is seen as well-organized and covering the necessary breadth, though no comment elevates it to 'ultimate guide' status.",
+"score": 4
+},
+"IQL3_accurate": {
+"reason": "Useful & Referential (4). The explicit ingredient list (no artificial sweeteners, soy-free, gluten-free) is received as credible and data-grounded. Comments like 'no fluff, just the info I needed' and appreciation for the comparison chart signal that the audience perceives the content as objective and reliable.",
+"score": 4
+},
+"IQL4_timely": {
+"reason": "Neutral (3). The only comment that appears time-related ('good timing too — I've been looking for a post-workout option for weeks') reflects a personal need coincidence rather than any evaluation of the post's publication speed or novelty. Per the exclusion rule, this MUST be excluded. With no remaining comments referencing timeliness, trend alignment, or first-hand advantage, the climate defaults to [3] Neutral.",
+"score": 3
+}
+}
+}
+
+<EXAMPLE 5> — All [5] — Human Influencer, Makeup Product
+
+Post Image
+[A photo of a beauty influencer with a full face of makeup, with a detailed split-screen comparison showing foundation performance under different lighting conditions and after 10 hours of wear]
+
+Post Caption
+I tested 5 foundations for oily skin over 10 days. Raw camera only. No filters. Full wear-test results, ingredient comparison, and dupe list in the carousel. #foundationreview #oilyskin #makeuptesting
+
+Influencer Type
+example_account is a Human Influencer
+
+Audience Comments
+Comment 1: This is the most thorough foundation review I've ever seen. Saved immediately as my go-to buying guide.
+Comment 2: The 10-hour raw camera test answered every question I had. No other review comes close.
+Comment 3: You're always first with this kind of in-depth content. The dupe list alone is worth bookmarking.
+Comment 4: The ingredient comparison table is incredible. This completely solved my confusion about which formula is safe for acne-prone skin.
+Comment 5: Finally someone with actual data. The controlled lighting comparison is the gold standard for this kind of review.
+Comment 6: I've been searching for this exact breakdown for months. This is the definitive guide for oily skin foundation.
+
+Output JSON
+{
+"IQL_construct": {
+"IQL1_sufficient": {
+"reason": "Problem-Solving (5). The comment section overwhelmingly treats the post as having resolved long-standing, specific needs. Phrases like 'answered every question I had', 'completely solved my confusion about acne-prone skin', and 'I've been searching for this exact breakdown for months' are unambiguous signals that the content did not merely inform — it resolved concrete difficulties.",
+"score": 5
+},
+"IQL2_complete": {
+"reason": "Problem-Solving (5). Multiple comments explicitly reference the post as a definitive reference: 'saved immediately as my go-to buying guide', 'definitive guide for oily skin foundation', and 'worth bookmarking.' The carousel format covering wear tests, ingredient comparisons, and a dupe list is collectively recognized as an exhaustive, ultimate-guide level resource.",
+"score": 5
+},
+"IQL3_accurate": {
+"reason": "Problem-Solving (5). The audience explicitly praises the methodological rigor: 'raw camera only', 'controlled lighting comparison is the gold standard', and 'actual data.' The 10-day, no-filter testing protocol is recognized as standing up to objective scrutiny, meeting the [5] threshold of being beyond challenge.",
+"score": 5
+},
+"IQL4_timely": {
+"reason": "Problem-Solving (5). The comment 'you're always first with this kind of in-depth content' directly signals first-mover status. The depth and speed of publication are praised simultaneously, satisfying the [5] threshold of exceptional timeliness advantage.",
+"score": 5
+}
+}
+}
+
+<EXAMPLE 6> — All [1-2] — Virtual Influencer, Skincare Product
+
+Post Image
+[A CGI-rendered virtual influencer with flawless skin, holding a sheet mask product in a futuristic-looking bathroom setting]
+
+Post Caption
+My skin has never felt this hydrated! This sheet mask is an absolute must-have for dry skin types. I use it every night before bed for that dewy glass skin glow ✨ #skincare #sheetmask #glasskin
+
+Influencer Type
+example_account is a Virtual Influencer
+
+Audience Comments
+Comment 1: She's literally CGI. She doesn't have skin. How is she reviewing a skincare product?
+Comment 2: A virtual character endorsing a sheet mask is the most meaningless review I've ever seen. Zero credibility on anything skin-related.
+Comment 3: I don't trust any ingredient claims coming from something that was rendered in a computer.
+Comment 4: There's no way to verify any of this. She can't actually test hydration levels. The data means nothing.
+Comment 5: This is just a brand paying for a pretty CGI image. Nothing she says about the formula is reliable.
+Comment 6: All the information here is essentially made up. A digital avatar can't have a skincare routine.
+Comment 7: How can she talk about dry skin when she doesn't have pores? Everything about this review is pointless.
+
+Output JSON
+{
+"IQL_construct": {
+"IQL1_sufficient": {
+"reason": "No Value (1). The audience universally concludes the content fails to address any real need ('most meaningless review I've ever seen', 'everything about this review is pointless'). The functional sufficiency of the information is seen as nonexistent.",
+"score": 1
+},
+"IQL2_complete": {
+"reason": "No Value (1). No audience member engages with the completeness of the post. The entire information package is pre-emptively dismissed ('all the information here is essentially made up') with zero acknowledgment of any informational depth or breadth.",
+"score": 1
+},
+"IQL3_accurate": {
+"reason": "No Value (1). The verifiability of the content is directly challenged: 'there's no way to verify any of this', 'she can't actually test hydration levels', 'the data means nothing.' The audience collectively concludes that no objective claim in the post can be trusted.",
+"score": 1
+},
+"IQL4_timely": {
+"reason": "Low Value (2). No comment evaluates the timeliness of the post directly. However, the blanket dismissal of the content's credibility suppresses any potential positive timeliness signal, preventing the climate from settling at a clean [3] Neutral.",
+"score": 2
+}
+}
+}
+
+<EXAMPLE 7> — Mixed Climate [3-4] — Human Influencer, Baby & Parenting Products
+
+Post Image
+[A photo of a lifestyle influencer sitting on a nursery floor surrounded by baby products including a diaper pail, bath support, and a mushroom-shaped night light]
+
+Post Caption
+Now that Viyan is officially 4 months old, I wanted to share some game-changing products that have made life as new parents so much easier! The @BrandA Platinum is an absolute must-have—sleek, convenient, and something we use every day! We also can't recommend the @BrandB Bath Support and Magical Dreams Celeste Mushroom enough—both have been lifesavers for bath time and bedtime. These would make the perfect holiday gifts for any new or expecting parents! #ad #DiaperGeniePartner #AngelcarePartner #DiaperGenie #Angelcare #Holidaygifts
+
+Influencer Type
+example_account is a Human Influencer
+
+Audience Comments
+Comment 1: Beautiful 😻❤️
+Comment 2: He's such a cutie 🥰
+Comment 3: The night light is so cute!
+Comment 4: ❤️
+Comment 5: Definitely great gift ideas for expecting/new parents! Also, Viyan's smile 😍
+Comment 6: We love being a part of these special moments 🤍
+Comment 7: 😍❤️🙌 He is such a cutie ❤️
+Comment 8: Definitely need these 🙌
+Comment 9: Great gift ideas! 👏
+Comment 10: Omg his smile is everything 😍 and this a great guide for people gifting new parents!
+Comment 11: So worth it!
+Comment 12: This one so good, we had to get two
+Comment 13: Baby V in the bath tho 😭😭🥺😍🩷
+Comment 14: so cute 😍
+Comment 15: 😍😍😍
+
+Output JSON
+{
+"IQL_construct": {
+"IQL1_sufficient": {
+"reason": "Useful & Referential (4). Although the majority of comments are aesthetic reactions to the baby ('he is such a cutie', 'Baby V in the bath tho'), the Signal Dilution Rule applies here. Comments 5, 8, 9, and 11 contain clear functional evaluation signals: 'Definitely great gift ideas for expecting/new parents', 'Great gift ideas', 'Definitely need these', and 'So worth it' all explicitly affirm that the content addresses a real need. Per the Signal Dilution Rule, these signals MUST break the [3] Neutral baseline. The climate is scored [4] rather than [5] because no comment identifies a specific pain point that was resolved.",
+"score": 4
+},
+"IQL2_complete": {
+"reason": "Useful & Referential (4). Comment 10 explicitly uses the word 'guide' ('this a great guide for people gifting new parents'), which is a direct IQL2 keyword indicating that the audience perceives the post as a well-organized reference. Per the Signal Dilution Rule, this single but explicit signal is sufficient to break the [3] Neutral baseline. The score remains [4] rather than [5] because no comment praises the post as an exhaustive or definitive resource.",
+"score": 4
+},
+"IQL3_accurate": {
+"reason": "Neutral (3). No audience member engages with the objective accuracy, data, or logical claims of the product descriptions. Comments like 'So worth it' and 'This one so good, we had to get two' reflect personal product satisfaction rather than an evaluation of the post's informational accuracy. The climate defaults to [3].",
+"score": 3
+},
+"IQL4_timely": {
+"reason": "Neutral (3). No comment evaluates the timeliness of the post, the novelty of the product recommendations, or the influencer's speed in sharing the content. Although the caption mentions holiday gifting, no audience member references this temporal aspect. The climate defaults to [3].",
+"score": 3
+}
+}
+}
+
+────────────────────────────────────────
+【SECTION 4: OUTPUT FORMAT REQUIREMENTS】
+────────────────────────────────────────
+RAW JSON ONLY. NO MARKDOWN CODE BLOCKS (do not wrap in ```json).
+NO conversational fillers before or after the JSON.
+Use single quotes (') inside the 'reason' field. NEVER use double quotes (") inside the string values to avoid JSON parsing errors.
+
+{
+"IQL_construct": {
+"IQL1_sufficient": {
+"reason": "...",
+"score": 0
+},
+"IQL2_complete": {
+"reason": "...",
+"score": 0
+},
+"IQL3_accurate": {
+"reason": "...",
+"score": 0
+},
+"IQL4_timely": {
+"reason": "...",
+"score": 0
+}
+}
+}
